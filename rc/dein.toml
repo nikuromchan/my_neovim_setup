@@ -1,0 +1,53 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# Color scheme (vim-hybrid)
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+hook_add = '''
+  let g:hybrid_use_iTerm_colors = 1
+  set background=dark
+  colorscheme hybrid
+  set termguicolors
+  syntax enable
+  set number
+  set cursorline
+  hi clear CursorLine
+'''
+
+# NERDTree
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  let g:NERDTreeShowBookmarks = 1
+  let g:NERDTreeShowHidden = 1
+  nnoremap <Space>n :NERDTreeToggle<CR>
+'''
+
+# vim-airline
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+hook_add = '''
+  set laststatus=2
+  " Powerline系フォントを利用する
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#buffer_idx_mode = 1
+  let g:airline#extensions#whitespace#mixed_indent_algo = 1
+  let g:airline_theme = 'papercolor'
+  " powerline symbols
+  if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+  let g:airline_left_sep = ''
+  let g:airline_left_alt_sep = ''
+  let g:airline_right_sep = ''
+  let g:airline_right_alt_sep = ''
+  let g:airline_symbols.branch = ''
+  let g:airline_symbols.readonly = ''
+  let g:airline_symbols.linenr = ''
+'''
+
