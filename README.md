@@ -15,6 +15,6 @@
 export XDG_CONFIG_HOME=~/.config
 ```
 
-3. `~/.config直下に`nvim`として置く
+3. `~/.config`直下に`nvim`として置く
 
 以上
